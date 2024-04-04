@@ -40,3 +40,12 @@ padding: 10px;
 
 }
 
+.id {
+float: right;
+color: red;
+}
+.status {
+    
+    color: #00ff55;
+
+}
