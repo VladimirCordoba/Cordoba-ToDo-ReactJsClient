@@ -41,11 +41,32 @@ padding: 10px;
 }
 
 .id {
+    
 float: right;
 color: red;
 }
 .status {
-    
+    margin-bottom: 0px;
+    padding: 0px;
     color: #00ff55;
+}
 
+.id:hover {
+transform: scale(1.2);
+}
+.status:hover {
+    /* opacity: 0.5; */
+    color: red;
+}
+aside form input, aside form button {
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
 }
