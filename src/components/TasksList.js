@@ -1,36 +1,33 @@
 import React from "react"
-import axios from "axios"
+
 import AddTask from "./AddTask"
 
 
 
-const baseUrl = "http://localhost:8080/consol/task/list "
+// const baseUrl = "http://localhost:8080/consol/task/list "
+
+ class TasksList extends React.Component {
+//********************************* */
+//перенесли этот конструктор в App.js
+
+//     constructor(props) {
+//         super(props)
+
+//         this.state = {
+//             tasks: []
+//         }
 
 
+//         axios.get(baseUrl).then((res) => {
 
-class TasksList extends React.Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            tasks: []
-        }
-
-
-        axios.get(baseUrl).then((res) => {
-
-            console.log(res.data)
+//             console.log(res.data)
            
-            this.setState({ tasks: res.data })
-           
+//             this.setState({ tasks: res.data })
 
-        })
-        
-       
+//         }) 
             
-    }
-
+//     }
+//*********************************************************** */
 
     // tasks = [
     //     {
@@ -49,13 +46,13 @@ class TasksList extends React.Component {
     // ]
 
     render() {
-         if (this.state.tasks.length > 0)
+         if (this.props.tasks.length > 0)
             return (
                         <div>
 
                 
 
-                { this.state.tasks.map((el) => (<div className="task" key={el.id}>
+                { this.props.tasks.map((el) => (<div className="task" key={el.id}>
                 {/* {this.tasks.map((el) => (<div className="task" key={el.id}>{el.task} */}
 
                     {/* <h3>id: {el.id}; Tasks: {el.Task}; Status: {el.Status}</h3> */}

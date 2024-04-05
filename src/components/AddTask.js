@@ -4,7 +4,7 @@ class AddTask extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tasks: ""
+      task: ""
     }
 
   }
@@ -13,8 +13,10 @@ class AddTask extends React.Component {
   render() {
     return (
       <form className="addform">
-        <input placeholder="Task" />
-        <button type="button"> Add new tasks</button>
+        <input placeholder="Task" onChange={(e) => this.setState({task: e.target.value})}/>
+        <button type=""onClick={() => this.props.onAdd({
+          task: this.state.task,
+        })}> Add new tasks</button>
 
 
 
