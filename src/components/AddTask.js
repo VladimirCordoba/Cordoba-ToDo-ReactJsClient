@@ -7,6 +7,8 @@ class AddTask extends React.Component {
       task: ""
     }
 
+   // this.AddTasks = this.addTasks.bind(this)
+//this.deleteTasks = this.deleteTasks.bind(this)
   }
 
 

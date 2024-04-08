@@ -1,33 +1,35 @@
 import React from "react"
-
 import AddTask from "./AddTask"
+
+
+import Task from "./Task"
 
 
 
 // const baseUrl = "http://localhost:8080/consol/task/list "
 
- class TasksList extends React.Component {
-//********************************* */
-//перенесли этот конструктор в App.js
+class TasksList extends React.Component {
+    //********************************* */
+    //перенесли этот конструктор в App.js
 
-//     constructor(props) {
-//         super(props)
+    //     constructor(props) {
+    //         super(props)
 
-//         this.state = {
-//             tasks: []
-//         }
+    //         this.state = {
+    //             tasks: []
+    //         }
 
 
-//         axios.get(baseUrl).then((res) => {
+    //         axios.get(baseUrl).then((res) => {
 
-//             console.log(res.data)
-           
-//             this.setState({ tasks: res.data })
+    //             console.log(res.data)
 
-//         }) 
-            
-//     }
-//*********************************************************** */
+    //             this.setState({ tasks: res.data })
+
+    //         }) 
+
+    //     }
+    //*********************************************************** */
 
     // tasks = [
     //     {
@@ -46,23 +48,15 @@ import AddTask from "./AddTask"
     // ]
 
     render() {
-         if (this.props.tasks.length > 0)
+        if (this.props.tasks.length > 0)
             return (
-                        <div>
+                <div>
 
-                
+                    {this.props.tasks.map((el) => (
 
-                { this.props.tasks.map((el) => (<div className="task" key={el.id}>
-                {/* {this.tasks.map((el) => (<div className="task" key={el.id}>{el.task} */}
-
-                    {/* <h3>id: {el.id}; Tasks: {el.Task}; Status: {el.Status}</h3> */}
-                      <h5 className="id">id: {el.id} </h5> 
-                      <h3>Tasks: {el.task}</h3>
-                      <h5 className="status">Status: {el.status}</h5>
-                    
-
-                </div>))}
-            </div>)
+                        <Task onDelete={this.props.onDelete} key={el.id} onetask={el}/>
+                    ))}
+                </div>)
         else
             return (<div className="task">
                 <h3>Task list empty</h3>

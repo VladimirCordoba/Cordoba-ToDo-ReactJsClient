@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    margin: 50px 100px;
+    margin: 50px 70px;
     width: 50%;
     float: left;
 }
@@ -41,13 +41,14 @@ padding: 10px;
 }
 
 .id {
-    
+margin-top: 0px;   
 float: right;
 color: red;
 }
 .status {
+    
     margin-bottom: 0px;
-    padding: 0px;
+    padding: 0px; 
     color: #00ff55;
 }
 
@@ -70,3 +71,23 @@ aside form input, aside form button {
     outline: none;
     font-size: 15px;
 }
+
+main .delete-icon {
+    float: right;
+    color: #ffff00;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+main .edit-icon {
+    float: right; 
+    margin-right: 5px;
+    color: #ffff00;
+    cursor: pointer;
+    transform: scale(1);
+}
+main .delete-icon:hover,
+main .edit-icon:hover {
+    opacity: 0.5;
+}
+  .box  {margin-top: 10px; width: 100%; display: inline-block;} 
