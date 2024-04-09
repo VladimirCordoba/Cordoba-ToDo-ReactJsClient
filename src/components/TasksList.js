@@ -54,7 +54,7 @@ class TasksList extends React.Component {
 
                     {this.props.tasks.map((el) => (
 
-                        <Task onEdit={this.props.onEdit} onDelete={this.props.onDelete} key={el.id} onetask={el}/>
+                        <Task chStat={this.props.chStat} onEdit={this.props.onEdit} onDelete={this.props.onDelete} key={el.id} onetask={el}/>
                     ))}
                 </div>)
         else

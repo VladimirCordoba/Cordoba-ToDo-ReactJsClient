@@ -10,6 +10,7 @@ class AddTask extends React.Component {
 
     // this.AddTasks = this.addTasks.bind(this)
     //this.deleteTasks = this.deleteTasks.bind(this)
+   // this.changeStatus = this.changeStatus.bind(this)
   }
 
 
@@ -21,7 +22,8 @@ class AddTask extends React.Component {
 
                         this.taskAdd = {
                           task: this.state.task,
-                          id: this.state.id
+                          id: this.state.id,
+                       //   status: this.state.status
 
                         }
 

@@ -9,10 +9,9 @@ import Task from "./components/Task"
 
 const baseUrl = "http://localhost:8080/consol/task/list "
 const postAddUrl = "http://localhost:8080/react/addtask"
-// const postDelUrl = "http://localhost:8080/task/delate"
  const postDelUrl = "http://localhost:8080/react/deltask"
  const postEditUrl = "http://localhost:8080/react/edittask"
-
+ const poschStatusUrl = "http://localhost:8080/react/editstatus"
 
 
 class App extends React.Component {
@@ -33,7 +32,7 @@ class App extends React.Component {
 
         axios.get(baseUrl).then((res) => {
 
-            //  console.log(res.data)
+              console.log(res.data)
 
             this.setState({ tasks: res.data })
 
@@ -48,7 +47,7 @@ class App extends React.Component {
 
             <main>
 
-                <TasksList tasks={this.state.tasks} onEdit={this.editTask} onDelete={this.deleteTasks}/>
+                <TasksList chStat={this.chStatus} tasks={this.state.tasks} onEdit={this.editTask} onDelete={this.deleteTasks}/>
                
             </main>
             <aside>
@@ -107,7 +106,14 @@ class App extends React.Component {
      })
 
     }
-
+// new methot status change
+chStatus(task){
+    console.log(task)
+    axios.post(poschStatusUrl, task).then(res => {
+        
+    })
+    window.location.reload()
+}
 
 
 }
