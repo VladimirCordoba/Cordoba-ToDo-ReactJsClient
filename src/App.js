@@ -11,6 +11,7 @@ const baseUrl = "http://localhost:8080/consol/task/list "
 const postAddUrl = "http://localhost:8080/react/addtask"
 // const postDelUrl = "http://localhost:8080/task/delate"
  const postDelUrl = "http://localhost:8080/react/deltask"
+ const postEditUrl = "http://localhost:8080/react/edittask"
 
 
 
@@ -47,11 +48,21 @@ class App extends React.Component {
 
             <main>
 
-                <TasksList tasks={this.state.tasks} onDelete={this.deleteTasks}/>
+                <TasksList tasks={this.state.tasks} onEdit={this.editTask} onDelete={this.deleteTasks}/>
                
             </main>
             <aside>
                 <AddTask onAdd={this.addTasks} />
+
+{/*                 
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" 
+                data-type="VERTICAL" data-vanity="vladimirs-rjazanovs-259b79300" data-version="v1">
+                    
+                    </div>
+               */}
+              
+              
+
             </aside>
 
         </div>)
@@ -70,7 +81,7 @@ class App extends React.Component {
             
          // })
          })
-         window.location.reload()
+          window.location.reload()
 
     }
 
@@ -86,10 +97,16 @@ class App extends React.Component {
 
         // })
         })
-
     }
 
+    editTask(task){
+    console.log(task)
 
+    axios.post(postEditUrl, task).then(res => {
+        
+     })
+
+    }
 
 
 

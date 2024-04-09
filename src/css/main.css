@@ -59,8 +59,8 @@ transform: scale(1.2);
     /* opacity: 0.5; */
     color: red;
 }
-aside form input, aside form button {
-    width: 90%;
+  input, textarea, button {
+    width: 80%;
     padding: 15px 5%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;

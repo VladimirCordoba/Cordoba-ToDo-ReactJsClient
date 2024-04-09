@@ -1,14 +1,15 @@
 import React from "react"
 import { IoCloseCircleSharp, IoHammerSharp } from "react-icons/io5"
+import AddTask from "./AddTask"
 
 
 
 class Task extends React.Component {
 
-// constructor(props) {
-//     super(props)
-//     this.state = { editForm: false}
-// }
+constructor(props) {
+    super(props)
+    this.state = { editForm: false}
+}
 
 
     onetask = this.props.onetask
@@ -27,8 +28,15 @@ class Task extends React.Component {
                             
                              <IoCloseCircleSharp onClick={() => this.props.onDelete(this.onetask.id)  } className="delete-icon" /> 
                             {/* <IoCloseCircleSharp onClick={() => this.props.onDelete(id="4860")  } className="delete-icon" /> */}
-                            <IoHammerSharp className="edit-icon" />
+                            <IoHammerSharp onClick={() => {
+                                this.setState({
+                                    editForm: !this.state.editForm
+                                })
+                            }}className="edit-icon" />
                             <h5 className="status">Status: {this.onetask.status}</h5>
+
+                            {/*  displaing form for task edit */}
+                            {this.state.editForm && <AddTask task={this.onetask} onAdd={this.props.onEdit}/>}
 
                         </div>
 
