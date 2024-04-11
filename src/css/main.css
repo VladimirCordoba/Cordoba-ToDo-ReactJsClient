@@ -40,25 +40,52 @@ padding: 10px;
 
 }
 
+
 .id {
 margin-top: 0px;   
 float: right;
 color: red;
 }
-.status {
+
+/* .status {
     
     margin-bottom: 0px;
     padding: 0px; 
     color: #00ff55;
-}
+} */
+
+.OPEN {
+    
+    margin-bottom: 0px;
+    padding: 0px; 
+    color: #00ff55;
+} 
+.CLOSED {
+    
+    margin-bottom: 0px;
+    padding: 0px; 
+    color: red;
+} 
+
+h3.CLOSED {
+    
+    margin-bottom: 0px;
+    padding: 0px; 
+    color: rgba(14, 129, 125, 0.641);
+} 
+
+h3.CLOSED:hover {
+    color: greenyellow;
+} 
+
 
 .id:hover {
 transform: scale(1.2);
 }
-.status:hover {
-    /* opacity: 0.5; */
+/* .CLOSED:hover {
+    opacity: 0.1;
     color: red;
-}
+} */
 
 
 
